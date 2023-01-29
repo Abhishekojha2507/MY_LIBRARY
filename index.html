@@ -12,6 +12,29 @@
     />
   </head>
   <style>
+    body{
+      color:white !important;
+      position: relative;
+      background:rgba(0, 0, 0, 0.7);
+      height: 720px;
+    }
+    body::before{
+    content: "";
+    background: url('./pexels-pixabay-159711.jpg') center/cover;
+    background: url('./pexels-ricardo-esquivel-1907785.jpg') center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    filter: blur(1px);
+    }
+    .container{
+      backdrop-filter: blur(2px);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
     a {
       color: whitesmoke !important;
     }
@@ -21,7 +44,6 @@
       margin: auto;
       background-color: rgb(112, 141, 203);
       border-radius:10px ;
-
       box-shadow:5px 2px 8px 1px rgb(157, 57, 57);
     }
     
@@ -85,7 +107,7 @@
       </div>
     </nav>
 
-    <div id="message">
+    <div id="message" style=" display: none;">
      
     </div>
 
@@ -117,7 +139,8 @@
           </div>
         </div>
 
-        <fieldset class="row mb-3">
+      
+        <fieldset class="row mb-3" >
           <legend class="col-form-label col-sm-2 pt-0">Type</legend>
           <div class="col-sm-10">
 
