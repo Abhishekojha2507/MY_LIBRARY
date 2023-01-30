@@ -147,7 +147,6 @@ function libraryFormSubmit(e) {
   let Programming = document.getElementById("Programming");
   let Sports = document.getElementById("Sports");
   let type;
-  let book = new Book(name, author, type);
   if (Fiction.checked) {
     type = Fiction.value;
   } else if (Programming.checked) {
@@ -155,8 +154,9 @@ function libraryFormSubmit(e) {
   } else if (Sports.checked) {
     type = Sports.value;
   }
+    let book = new Book(name, author, type);
   e.preventDefault();
-  // console.log(this);
+  console.log(book);
 
   // storing data to localStorage for refreshed page
   let dataRetrieved = JSON.parse(localStorage.getItem("allData"));
